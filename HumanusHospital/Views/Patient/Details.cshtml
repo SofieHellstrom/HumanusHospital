@@ -74,6 +74,29 @@
             @Html.DisplayFor(model => model.Room)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Registrations)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Room</th>
+                    <th>Grade</th>
+                </tr>
+                @foreach (var item in Model.Registrations)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Room.RoomID)
+                    </td>
+                    <td>
+                      <!--                                                -->  @Html.DisplayFor(modelItem => item.Room)
+                    </td>
+                </tr>
+        }
+            </table>
+        </dd>
+
     </dl>
 </div>
 <p>
