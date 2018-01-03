@@ -8,9 +8,10 @@ namespace HumanusHospital.Models
 {
     public class Room
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)] //this attribute lets you enter the primary key for the course rather than having the database generate it.
+        [DatabaseGenerated(DatabaseGeneratedOption.None)] //this attribute lets you enter the primary key for the room rather than having the database generate it.
         public string RoomID { get; set; }
-        public enum Function { Patientroom, Lab, Examination, Administration }
+        public string Function { get; set; }
+        //public enum Function { Patientroom, Lab, Examination, Administration } 
         public int Capacity { get; set; }
         public int Max_Capacity { get; set; }
         public string Department { get; set; }

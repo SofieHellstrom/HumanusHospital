@@ -78,10 +78,10 @@
             @Html.DisplayNameFor(model => model.Registrations)
         </dt>
         <dd>
-            <table class="table">
+            <table class="table table-bordered">
                 <tr>
                     <th>Room</th>
-                    <th>Grade</th>
+                    
                 </tr>
                 @foreach (var item in Model.Registrations)
             {
@@ -89,9 +89,8 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.Room.RoomID)
                     </td>
-                    <td>
-                      <!--                                                -->  @Html.DisplayFor(modelItem => item.Room)
-                    </td>
+                    
+                      <!--       Add more registration parameters here if they get added in model         --> 
                 </tr>
         }
             </table>
