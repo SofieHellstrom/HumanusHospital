@@ -70,7 +70,7 @@ namespace HumanusHospital.Controllers
                     patients = patients.OrderBy(p => p.LastName);
                     break;
             }
-            int pageSize = 3;
+            int pageSize = 5;
             int pageNumber = (page ?? 1);
             return View(patients.ToPagedList(pageNumber, pageSize));
         }

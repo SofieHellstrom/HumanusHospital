@@ -5,11 +5,10 @@
     ViewBag.Title = "Patient Registry";
 }
 
-<h2>Patients</h2>
+<h2>Patient Registry</h2>
+<br />
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 @using (Html.BeginForm("Index", "Patient", FormMethod.Get))
 {
     <p>
@@ -17,6 +16,9 @@
         <input type="submit" value="Search" />
     </p>
 }
+    <p>
+        <a class="btn btn-default" href='@Url.Action("Create", "Patient")'>Register New Patient</a>
+    </p>
 <table class="table table-hover table-bordered">
     <tr>
         <th>
@@ -58,8 +60,10 @@
     }
 
 </table>
-<br />
+
 Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
 
 @Html.PagedListPager(Model, page => Url.Action("Index",
     new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+
+

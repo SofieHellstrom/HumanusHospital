@@ -7,9 +7,16 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Patient</h4>
+    
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonIDNr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonIDNr)
+        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.FirstName)
         </dt>
@@ -67,6 +74,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Bloodtype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bloodtype)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Room)
         </dt>
 
@@ -74,27 +89,7 @@
             @Html.DisplayFor(model => model.Room)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Registrations)
-        </dt>
-        <dd>
-            <table class="table table-bordered">
-                <tr>
-                    <th>Room</th>
-                    
-                </tr>
-                @foreach (var item in Model.Registrations)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Room.RoomID)
-                    </td>
-                    
-                      <!--       Add more registration parameters here if they get added in model         --> 
-                </tr>
-        }
-            </table>
-        </dd>
+        
 
     </dl>
 </div>
