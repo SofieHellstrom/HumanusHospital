@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanusHospital", "HumanusHospital\HumanusHospital.csproj", "{96FD11A4-E417-4142-B634-B4C255792484}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PWencode", "PWencode\PWencode.csproj", "{B2652BAD-EABC-4301-8206-AC9C8429F9A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{96FD11A4-E417-4142-B634-B4C255792484}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96FD11A4-E417-4142-B634-B4C255792484}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96FD11A4-E417-4142-B634-B4C255792484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2652BAD-EABC-4301-8206-AC9C8429F9A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2652BAD-EABC-4301-8206-AC9C8429F9A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2652BAD-EABC-4301-8206-AC9C8429F9A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2652BAD-EABC-4301-8206-AC9C8429F9A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

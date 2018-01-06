@@ -27,6 +27,7 @@ namespace HumanusHospital.DAL
 
             patients.ForEach(s => context.Patients.Add(s));
             context.SaveChanges();
+
             var rooms = new List<Room>
             {
             new Room{RoomID="P101", Capacity=5, Max_Capacity=8},
@@ -43,6 +44,13 @@ namespace HumanusHospital.DAL
             new Registration{RegistrationID=1, RoomID="P101", PatientPersonIDNr="19880213-3478"},
             };
             registrations.ForEach(s => context.Registrations.Add(s));
+            context.SaveChanges();
+
+            var users = new List<User>
+            {
+            new User { UserID="Tester", Password="test"}
+            };
+            users.ForEach(s => context.Users.Add(s));
             context.SaveChanges();
         }
     }

@@ -20,6 +20,7 @@ namespace HumanusHospital.DAL
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Registration> Registrations { get; set; }
         public DbSet<Room> Rooms { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
