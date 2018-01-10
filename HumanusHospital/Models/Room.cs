@@ -17,5 +17,6 @@ namespace HumanusHospital.Models
         public string Department { get; set; }
 
         public virtual ICollection<Registration> Registrations { get; set; }
+        public virtual ICollection<Patient> Patient { get; set; }
     }
 }

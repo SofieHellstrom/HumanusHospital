@@ -26,6 +26,7 @@ namespace HumanusHospital.DAL
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>(); //prevents table names from being pluralized
             modelBuilder.Entity<Patient>().HasKey(x => x.PersonIDNr); //expression to set primary key to non-conventionally named property
+            //modelBuilder.Entity<Patient>().HasOptional(p => p.Room).WithMany(r => r.Patient).Map(t => t.MapKey("PersonIDNr").MapKey("RoomID").ToTable("PatientRoom")); //testing a thing ignore this
             base.OnModelCreating(modelBuilder);
         }
     }

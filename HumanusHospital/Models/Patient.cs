@@ -39,7 +39,7 @@ namespace HumanusHospital.Models
         public string Bloodtype { get; set; }
 
         public virtual ICollection<Registration> Registrations { get; set; }
-        public string Room { get; set; }
+        public virtual Room Room { get; set; }
 
 
     }

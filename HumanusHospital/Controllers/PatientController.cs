@@ -132,6 +132,7 @@ namespace HumanusHospital.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.Room = new SelectList(db.Rooms, "RoomID", "RoomID");
             return View(patient);
         }
 
@@ -148,7 +149,7 @@ namespace HumanusHospital.Controllers
             }
             var patientToUpdate = db.Patients.Find(id);
             if (TryUpdateModel(patientToUpdate, "",
-               new string[] { "PersonIDNr", "FirstName", "LastName", "Address", "Zipcode", "City", "Phone", "Email", "Room" }))
+               new string[] { "PersonIDNr", "FirstName", "LastName", "Address", "Zipcode", "City", "Phone", "Email", "Bloodtype", "Room" }))
             {
                 try
                 {
