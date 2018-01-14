@@ -39,6 +39,10 @@ namespace HumanusHospital.Models
         public string Bloodtype { get; set; }
 
         public virtual ICollection<Registration> Registrations { get; set; }
+
+        public string RoomID { get; set; }
+
+        [ForeignKey("RoomID")]
         public virtual Room Room { get; set; }
 
 

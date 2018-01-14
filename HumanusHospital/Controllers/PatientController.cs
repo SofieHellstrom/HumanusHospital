@@ -132,10 +132,12 @@ namespace HumanusHospital.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.Room = new SelectList(db.Rooms, "RoomID", "RoomID");
+            ViewBag.Room = new SelectList(db.Rooms, "RoomID", "RoomID"); //for dropdown selection of rooms
+
+
             return View(patient);
         }
-
+       
         // POST: Patient/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -149,7 +151,7 @@ namespace HumanusHospital.Controllers
             }
             var patientToUpdate = db.Patients.Find(id);
             if (TryUpdateModel(patientToUpdate, "",
-               new string[] { "PersonIDNr", "FirstName", "LastName", "Address", "Zipcode", "City", "Phone", "Email", "Bloodtype", "Room" }))
+               new string[] { "PersonIDNr", "FirstName", "LastName", "Address", "Zipcode", "City", "Phone", "Email", "Bloodtype", "RoomID" }))
             {
                 try
                 {
