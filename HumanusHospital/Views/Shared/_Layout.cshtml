@@ -7,8 +7,6 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href="~/Content/simple-sidebar.css" rel="stylesheet" />
-
-
 </head>
 <body style="padding-top: 0px">
 
@@ -35,6 +33,7 @@
             </div>
         </div>-->
     <!--  Default Navbar End  -->
+
     <!--  Simple Sidebar Start -->
     <nav class="navbar navbar-default no-margin" style="margin-bottom: 0px">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,7 +41,7 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" id="menu-toggle">
                 <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
             </button>
-            <a class="navbar-brand" href="#"><i class="fa fa-rocket fa-4"></i> Sidebar</a>
+            <a class="navbar-brand" href='@Url.Action("Index", "Home")'><i class="fa fa-rocket fa-4"></i>Humanus Hospital</a>
         </div><!-- navbar-header-->
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -57,34 +56,26 @@
             <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
 
                 <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span> Dashboard</a>
+                    <a href='@Url.Action("Index", "Home")'><span class="fa-stack fa-lg pull-left"></span>Dashboard</a>
+                </li>
+                <li>
+                    <a href='@Url.Action("Index", "Patient")'><span class="fa-stack fa-lg pull-left"></span>Patients</a>
                     <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                        <li><a href="#">link1</a></li>
-                        <li><a href="#">link2</a></li>
+                        <li><a href='@Url.Action("Create", "Patient")'><span class="fa-stack fa-lg pull-left"></span>New Patient</a></li>
+                        <li><a href='@Url.Action("Index", "Patient")'><span class="fa-stack fa-lg pull-left"></span>Patient Registry</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span> Shortcut</a>
-                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>link1</a></li>
-                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>link2</a></li>
-
-                    </ul>
+                    <a href='@Url.Action("Index", "Room")'><span class="fa-stack fa-lg pull-left"></span>Rooms</a>
                 </li>
                 <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-cloud-download fa-stack-1x "></i></span>Overview</a>
+                    <a href='@Url.Action("Index", "Home")'><span class="fa-stack fa-lg pull-left"></span>Administration</a>
                 </li>
                 <li>
-                    <a href="#"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-cart-plus fa-stack-1x "></i></span>Events</a>
+                    <a href='@Url.Action("Index", "Home")'><span class="fa-stack fa-lg pull-left"></span>Staff</a>
                 </li>
                 <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-youtube-play fa-stack-1x "></i></span>About</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-wrench fa-stack-1x "></i></span>Services</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-server fa-stack-1x "></i></span>Contact</a>
+                    <a href='@Url.Action("Contact", "Home")'><span class="fa-stack fa-lg pull-left"></span>Contact</a>
                 </li>
             </ul>
         </div><!-- /#sidebar-wrapper -->
